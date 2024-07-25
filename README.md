@@ -9,7 +9,7 @@
 - Alertar o usuário se o campo de entrada estiver vazio
 - Excluir item da lista com click
 - Embaralhar a lista e realizar o sorteio
-- Design responsivo para dispositivos móveis e desktop
+
 
 # Tecnologias Utilizadas
 - HTML: Estrutura básica da página
