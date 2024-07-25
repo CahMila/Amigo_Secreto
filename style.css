@@ -204,38 +204,3 @@ body {
   background-color: #fff;
   color: #1875e8;
 }
-
-
-/* Estilos para dispositivos móveis */
-@media (max-width: 600px) {
-  .container {
-      padding: 10px;
-  }
-  
-  #nome-amigo {
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-  }
-  
-  #adicionar-btn {
-      width: 100%;
-      padding: 10px;
-      box-sizing: border-box;
-  }
-}
-
-/* Estilos para dispositivos maiores */
-@media (min-width: 601px) {
-  #nome-amigo {
-      width: calc(100% - 110px);
-      padding: 10px;
-      box-sizing: border-box;
-  }
-  
-  #adicionar-btn {
-      width: 100px;
-      padding: 10px;
-      box-sizing: border-box;
-  }
-}

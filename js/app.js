@@ -5,20 +5,23 @@ function adicionar(){
     let amigo = document.getElementById('nome-amigo');
     let lista = document.getElementById('lista-amigos');
 
+    //convertendo o nome para maiusculo
+    let nomeMaiusculo = amigo.value.trim().toUpperCase();
+
     //verificar o campo vazio
-    if(amigo.value.trim() === ''){
+    if(nomeMaiusculo === ''){
         alert('Digite o nome do amigo');
         return; //interrompe a execução da função se o campo estiver vazio
     }
 
     //verificar se o nome ja esta na lista
-    if(amigos.includes(amigo.value.trim())){
+    if(amigos.includes(nomeMaiusculo)){
         alert('Esse amigo ja esta na lista');
         amigo.value = ''; //limpa o campo de entrada
         return; //interrompe a execução da função se o nome ja estiver na lista
     }
 
-    amigos.push (amigo.value.trim()); //adicionar os amigos no array
+    amigos.push (nomeMaiusculo); //adicionar os amigos no array
 
     if (lista.textContent ==''){
         lista.textContent = amigo.value;
@@ -34,6 +37,10 @@ function adicionar(){
 
 //sortear os nomes
 function sortear(){
+    if(amigos.length < 4){
+        alert('Adicione pelo menos quatro amigos para sortear');
+        return;
+    }
     embaralha(amigos); 
 
     let sorteio = document.getElementById('lista-sorteio');
